@@ -49,7 +49,7 @@ color='#456789'
 HELP() {
 
   echo -e "
-${BGre}ubuntu-gdm-set-background${BGre} script (for changing Ubuntu ${BWhi}20.04, 21.04, 21.10 & 22.04${RCol} GDM Background) HELP
+${BGre}ubuntu-22-04-set-background.sh${BGre} script (for changing Ubuntu ${BWhi}20.04, 21.04, 21.10 & 22.04${RCol} GDM Background) HELP
 
 there are four options
 1. background with image
@@ -62,19 +62,19 @@ you may choose colors from ${BBlu}https://www.color-hex.com/${RCol}
 
 Example Commands:
 
-1. ${BWhi}sudo ./ubuntu-gdm-set-background --image ${BGre}/home/user/backgrounds/image.jpg${RCol}
-2. ${BWhi}sudo ./ubuntu-gdm-set-background --color \#aAbBcC${RCol}
-3. ${BWhi}sudo ./ubuntu-gdm-set-background --gradient horizontal \#aAbBcC \#dDeEfF${RCol}
-4. ${BWhi}sudo ./ubuntu-gdm-set-background --gradient vertical \#aAbBcC \#dDeEfF${RCol}
-5. ${BWhi}sudo ./ubuntu-gdm-set-background --reset${RCol}
-6. ./ubuntu-gdm-set-background --help
+1. ${BWhi}sudo ./ubuntu-22-04-set-background.sh --image ${BGre}/home/user/backgrounds/image.jpg${RCol}
+2. ${BWhi}sudo ./ubuntu-22-04-set-background.sh --color \#aAbBcC${RCol}
+3. ${BWhi}sudo ./ubuntu-22-04-set-background.sh --gradient horizontal \#aAbBcC \#dDeEfF${RCol}
+4. ${BWhi}sudo ./ubuntu-22-04-set-background.sh --gradient vertical \#aAbBcC \#dDeEfF${RCol}
+5. ${BWhi}sudo ./ubuntu-22-04-set-background.sh --reset${RCol}
+6. ./ubuntu-22-04-set-background.sh --help
 
 RESCUE_MODE, Example Commands:
 
-1. ${BWhi}$ sudo ./ubuntu-gdm-set-background --image ${BGre}/home/user/backgrounds/image.jpg ${BWhi}rescue${RCol}
-2. ${BWhi}$ sudo ./ubuntu-gdm-set-background --color \#aAbBcC rescue ${RCol}
-3. ${BWhi}$ sudo ./ubuntu-gdm-set-background --gradient horizontal \#aAbBcC \#dDeEfF rescue${RCol}
-4. ${BWhi}$ sudo ./ubuntu-gdm-set-background --gradient vertical \#aAbBcC \#dDeEfF rescue${RCol}
+1. ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --image ${BGre}/home/user/backgrounds/image.jpg ${BWhi}rescue${RCol}
+2. ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --color \#aAbBcC rescue ${RCol}
+3. ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --gradient horizontal \#aAbBcC \#dDeEfF rescue${RCol}
+4. ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --gradient vertical \#aAbBcC \#dDeEfF rescue${RCol}
 
 ${BWhi}Why RESCUE_MODE?${RCol}
 It is when you try to change the background with some other scripts and then interacted with this script,
@@ -233,20 +233,20 @@ background-position: center; }' >$GDM_RESOURCE_CONFIG_NAME.css
     echo -e "${BRed}
 Absolute path to image is neither provided nor is it valid.
 see help with below command${BWhi}
-$ ./ubuntu-gdm-set-background --help${RCol}"
+$ ./ubuntu-22-04-set-background.sh --help${RCol}"
     exit 1
   fi
   ;;
   --color)
     if [ -z "$2" ]; then
       echo -e "${Red}Color is not provided.
-      Use ${BWhi}\$ sudo ./ubuntu-gdm-set-background --color #aee02a${RCol} to set ${BWhi}#aee02a${RCol} as the background color.${RCol}"
+      Use ${BWhi}\$ sudo ./ubuntu-22-04-set-background.sh --color #aee02a${RCol} to set ${BWhi}#aee02a${RCol} as the background color.${RCol}"
       exit 1
     fi
     if ! [[ $2 =~ ^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$ ]]; then
       echo -e "${BRed}Provided color is not a valid 'HEX Color Code'${RCol}
 See help with below command
-${BWhi}$ ./ubuntu-gdm-set-background --help${RCol}"
+${BWhi}$ ./ubuntu-22-04-set-background.sh --help${RCol}"
       exit 1
     fi
 
@@ -276,9 +276,9 @@ background-color: '$2'; }' >$GDM_RESOURCE_CONFIG_NAME.css
     direction=$2
   else
     echo -e "${BRed}Gradient direction is not provided.${RCol}
-    Use ${BWhi}$ sudo ./ubuntu-gdm-set-background --gradient horizontal \#aa03af \#afa0ee${RCol} OR
-    ${BWhi}$ sudo ./ubuntu-gdm-set-background --gradient vertical \#aa03af \#afa0ee${RCol} to set a vertical gradient.
-    See ${BWhi}./ubuntu-gdm-set-background --help for more info${RCol}"
+    Use ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --gradient horizontal \#aa03af \#afa0ee${RCol} OR
+    ${BWhi}$ sudo ./ubuntu-22-04-set-background.sh --gradient vertical \#aa03af \#afa0ee${RCol} to set a vertical gradient.
+    See ${BWhi}./ubuntu-22-04-set-background.sh --help for more info${RCol}"
     exit 1
   fi
   if [[ -z "$3" || -z "$4" ]]; then
@@ -289,7 +289,7 @@ background-color: '$2'; }' >$GDM_RESOURCE_CONFIG_NAME.css
   if ! [[ $3 =~ ^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$ ]] || ! [[ $4 =~ ^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$ ]]; then
     echo -e "${BRed}Provided color/colors is/are not a valid 'HEX Color Code'${RCol}.
 See help with below command
-${BWhi}$ ./ubuntu-gdm-set-background --help${RCol}"
+${BWhi}$ ./ubuntu-22-04-set-background.sh --help${RCol}"
     exit 1
   fi
 
