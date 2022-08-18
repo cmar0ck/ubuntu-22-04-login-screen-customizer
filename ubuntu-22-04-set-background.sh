@@ -155,7 +155,7 @@ SET_GRESOURCE() {
   check=$(update-alternatives --query $GDM_RESOURCE_CONFIG_NAME-theme.gresource | grep Value | grep $dest/custom-gdm-background.gresource >/dev/null && echo "pass" || echo "fail")
   if [ "$check" == "pass" ]; then
     echo -e "
-🙂 ${BGre}Seems 'background change is successful'${RCol}
+🙂 ${BGre} Background has been changed successfully.${RCol}
 Changes will be effective after a Reboot (${BWhi}CTRL+ALT+F1${RCol} may show the changes immediately)
 If something went wrong, log on to tty and run the below command
 ${BWhi}$ sudo update-alternatives --quiet --set $GDM_RESOURCE_CONFIG_NAME-theme.gresource /usr/share/gnome-shell/theme/Yaru/gnome-shell-theme.gresource${RCol}
