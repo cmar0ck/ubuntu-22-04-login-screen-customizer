@@ -17,18 +17,18 @@ Tip: You can pick colors from https://www.color-hex.com/
 Example Commands:
 
 1. `sudo ./ubuntu-22-04-set-background --image /home/user/backgrounds/image.jpg`
-2. `sudo ./ubuntu-22-04-set-background --color \#AABBCC`
-3. `sudo ./ubuntu-22-04-set-background --gradient horizontal \#AABBCC \#DDEEFF`
-4. `sudo ./ubuntu-22-04-set-background --gradient vertical \#AABBCC \#DDEEFF`
+2. `sudo ./ubuntu-22-04-set-background --color #AABBCC`
+3. `sudo ./ubuntu-22-04-set-background --gradient horizontal #AABBCC #DDEEFF`
+4. `sudo ./ubuntu-22-04-set-background --gradient vertical #AABBCC #DDEEFF`
 5. `sudo ./ubuntu-22-04-set-background --reset`
 6. `./ubuntu-22-04-set-background --help`
 
 RESCUE_MODE, Example Commands:
 
 1. `sudo ./ubuntu-22-04-set-background --image /home/user/backgrounds/image.jpg rescue`
-2. `sudo ./ubuntu-22-04-set-background --color \#AABBCC rescue`
-3. `sudo ./ubuntu-22-04-set-background --gradient horizontal \#AABBCC \#DDEEFF rescue`
-4. `sudo ./ubuntu-22-04-set-background --gradient vertical \#AABBCC \#DDEEFF rescue`
+2. `sudo ./ubuntu-22-04-set-background --color #AABBCC rescue`
+3. `sudo ./ubuntu-22-04-set-background --gradient horizontal #AABBCC #DDEEFF rescue`
+4. `sudo ./ubuntu-22-04-set-background --gradient vertical #AABBCC #DDEEFF rescue`
 
 Why RESCUE_MODE?
 If another script created conflicts with your configuration add 'rescue' to the end of the command as mentiond above.
